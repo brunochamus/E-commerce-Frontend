@@ -1,0 +1,15 @@
+.imgCarro{
+    width: 2.6rem;
+    margin-left: 9rem;
+    cursor: pointer;
+}
+
+strong{
+    font-size: 1.3rem;
+    color: rgb(226, 199, 77);
+}
+
+.imgCarro:hover{
+    background: rgb(114, 117, 121);
+    border-radius: 6px;
+}

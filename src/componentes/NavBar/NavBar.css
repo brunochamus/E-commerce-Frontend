@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+
+    background-color: rgb(45, 39, 39);
+    height: 4.6rem;
+    font-family: Tahoma, sans-serif;
+}
+
+.logo{
+    height: 9rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+h1{
+    color: rgb(226, 199, 77);
+    text-transform: uppercase;
+    margin-left: 0;
+    font-size: 1.6rem;
+    margin: 3px;
+}
+
+li{
+    display: inline-block;
+    margin: 1rem;
+    cursor: pointer;
+    color: rgb(226, 199, 77);
+    text-transform: uppercase;
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+li:hover{
+    color: rgb(172, 49, 49);
+}
