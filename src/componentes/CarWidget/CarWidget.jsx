@@ -5,7 +5,7 @@ const CarWidget = () => {
 
   return (
     <div>
-        <img className='imgCarro' src="https://images.emojiterra.com/google/android-12l/512px/1f6d2.png" alt="carrito"/>
+        <img className='imgCarro' src="https://www.sportopticas.com/img/iconos/icono-carrito.png" alt="carrito"/>
         <strong>6</strong>
     </div>
   )

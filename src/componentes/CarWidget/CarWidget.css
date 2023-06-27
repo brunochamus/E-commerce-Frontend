@@ -1,15 +1,17 @@
 .imgCarro{
-    width: 2.6rem;
-    margin-left: 9rem;
+    width: 2.1rem;
+    margin-left: 2rem;
     cursor: pointer;
 }
 
 strong{
     font-size: 1.3rem;
-    color: rgb(226, 199, 77);
+    color: #fff;
+    margin-right: 2rem;
+    padding: 1rem;
 }
 
+
 .imgCarro:hover{
-    background: rgb(114, 117, 121);
-    border-radius: 6px;
+    border-bottom: solid 1px #f3c500;
 }
