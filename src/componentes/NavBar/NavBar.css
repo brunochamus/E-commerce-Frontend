@@ -1,5 +1,6 @@
 .body-nav{
     background-color:  #000;
+    border-bottom: #f3c500 solid 3px;
 }
 
 .name{
@@ -8,6 +9,11 @@
     margin-right: 10rem;
     font-weight: 500;
     color: #fff;
+    
+}
+
+.logo{
+    text-decoration: none;
 }
 
 .name:hover{
@@ -20,6 +26,8 @@
 }
 .sec{
     color: #fff !important;
+    margin-right: 1.5rem;
+    text-decoration: none;
 }
 
 .sec:hover{

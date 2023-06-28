@@ -1,5 +1,5 @@
 const productos = [
-    { id: "1", nombre: "PROCESADOR AMD Ryzen 5 3600 3ra Gen ", precio: 102, img: "../img/id1.png", idCat: "1" },
+    { id: "1", nombre: "PROCESADOR AMD Ryzen 5 3600 3ra Gen ", precio: 102, img: "../img/id1.jpg", idCat: "1" },
     { id: "2", nombre: "PROCESADOR AMD Ryzen 5 5600G GAMING", precio: 133, img: "../img/id2.png", idCat: "1" },
     { id: "3", nombre: "PROCESADOR INTEL Core i5 11400 11va Gen 6 Core", precio: 147, img: "../img/id3.jpg", idCat: "1" },
     { id: "4", nombre: "PROCESADOR INTEL Core i9 10900KF 10ma Gen 10 Core", precio: 230, img: "../img/id4.jpg", idCat: "1" },
