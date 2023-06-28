@@ -10,15 +10,15 @@ const NavBar = () => {
     <header>
       <Navbar collapseOnSelect expand="lg" className="body-nav">
       <Container>
-        <Link to= "/">
+        <NavLink to= "/">
         <Navbar.Brand className='name'>pc word</Navbar.Brand>
-        </Link>
+        </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="/categoria/2" className='sec'>Componentes</Nav.Link>
-            <Nav.Link to="/categoria/8" className='sec'>Perifericos</Nav.Link>
-            <Nav.Link className='sec'>Contacto</Nav.Link>
+            <NavLink to="/categoria/1" className='sec'>Procesadores</NavLink>
+            <NavLink to="/categoria/2" className='sec'>Mothers</NavLink>
+            <NavLink className='sec'>Contacto</NavLink>
             <CarWidget/>
           </Nav>
           <Nav>

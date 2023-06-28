@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import './Item.css'
+import { NavLink } from 'react-router-dom';
 
 
 const Item = ({ id, nombre, precio, img }) => {
@@ -13,7 +13,7 @@ const Item = ({ id, nombre, precio, img }) => {
           <Card.Text> {nombre} </Card.Text>
           <Card.Text>${precio} </Card.Text>
           <Card.Text>ID: {id} </Card.Text>
-          <Button className='btn-add' variant="primary">Mas detalles</Button>
+          <NavLink to={`/item/${id}`} className='btn-add' variant="primary">Mas detalles</NavLink>
         </Card.Body>
       </Card>
     </div>

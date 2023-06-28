@@ -1,16 +1,16 @@
 const productos = [
     { id: "1", nombre: "PROCESADOR AMD Ryzen 5 3600 3ra Gen ", precio: 102, img: "../img/id1.png", idCat: "1" },
-    { id: "2", nombre: "PROCESADOR AMD Ryzen 5 5600G GAMING", precio: 133, img: "../img/id2.png", idCat: "2" },
-    { id: "3", nombre: "PROCESADOR INTEL Core i5 11400 11va Gen 6 Core", precio: 147, img: "../img/id3.jpg", idCat: "3" },
-    { id: "4", nombre: "PROCESADOR INTEL Core i9 10900KF 10ma Gen 10 Core", precio: 230, img: "../img/id4.jpg", idCat: "4" },
-    { id: "5", nombre: "PROCESADOR INTEL Core i7 11700KF 11va Gen 8 Core", precio: 307, img: "../img/id5.jpg", idCat: "5" },
-    { id: "6", nombre: "MOTHER 1200 10ma 11va Gigabyte B560M-DS3H V2", precio: 70, img: "../img/id6.jpg", idCat: "6" },
-    { id: "7", nombre: "MOTHER AM4 Gigabyte B550 AORUS ELITE V2", precio: 118, img: "../img/id7.png", idCat: "7" },
-    { id: "8", nombre: "MOTHER 1200 10ma 11VA Gen Asus ROG STRIX Z590-E", precio: 151, img: "../img/id8.png", idCat: "8" },
-    { id: "9", nombre: "MOTHER AM4 Gigabyte B550M GAMING", precio: 39, img: "../img/id9.png", idCat: "9" },
-    { id: "10", nombre: "MOTHER AM4 Gigabyte A320M-H GAMING", precio: 51, img: "../img/id10.png", idCat: "10" },
-    { id: "11", nombre: "MOTHER AM4 Gigabyte B550M GAMING", precio: 39, img: "../img/id9.png", idCat: "11" },
-    { id: "12", nombre: "MOTHER AM4 Gigabyte A320M-H GAMING", precio: 51, img: "../img/id9.png", idCat: "12" },
+    { id: "2", nombre: "PROCESADOR AMD Ryzen 5 5600G GAMING", precio: 133, img: "../img/id2.png", idCat: "1" },
+    { id: "3", nombre: "PROCESADOR INTEL Core i5 11400 11va Gen 6 Core", precio: 147, img: "../img/id3.jpg", idCat: "1" },
+    { id: "4", nombre: "PROCESADOR INTEL Core i9 10900KF 10ma Gen 10 Core", precio: 230, img: "../img/id4.jpg", idCat: "1" },
+    { id: "5", nombre: "PROCESADOR INTEL Core i7 11700KF 11va Gen 8 Core", precio: 307, img: "../img/id5.jpg", idCat: "1" },
+    { id: "6", nombre: "MOTHER 1200 10ma 11va Gigabyte B560M-DS3H V2", precio: 70, img: "../img/id6.jpg", idCat: "2" },
+    { id: "7", nombre: "MOTHER AM4 Gigabyte B550 AORUS ELITE V2", precio: 118, img: "../img/id7.png", idCat: "2" },
+    { id: "8", nombre: "MOTHER 1200 10ma 11VA Gen Asus ROG STRIX Z590-E", precio: 151, img: "../img/id8.png", idCat: "2" },
+    { id: "9", nombre: "MOTHER AM4 Gigabyte B550M GAMING", precio: 39, img: "../img/id9.png", idCat: "2" },
+    { id: "10", nombre: "MOTHER AM4 Gigabyte A320M-H GAMING", precio: 51, img: "../img/id10.png", idCat: "2" },
+    { id: "11", nombre: "MOTHER AM4 Gigabyte B550M GAMING", precio: 39, img: "../img/id9.png", idCat: "2" },
+    { id: "12", nombre: "MOTHER AM4 Gigabyte A320M-H GAMING", precio: 51, img: "../img/id9.png", idCat: "2" },
 ]
 
 export const getProductos = () => {
