@@ -1,13 +1,13 @@
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import './Item.css'
+import { Link } from 'react-router-dom';
 
 
 const Item = ({ id, nombre, precio, img }) => {
   return (
     <div className='cards-prod'>
       <Card className='cards-total' style={{ width: '18rem' }}>
-        <Card.Img className='img-card' variant="top" src={img} />
+        <Card.Img variant="top" src={img} />
         <Card.Body className='cards-font'>
           <Card.Title className='prod' >Producto:</Card.Title>
           <Card.Text> {nombre} </Card.Text>

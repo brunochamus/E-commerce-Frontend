@@ -1,27 +1,12 @@
 .cards-prod{
     display: inline-block;
     margin: 2.6rem;
-    overflow: hidden;
-}
-
-.cards-prod:hover{
-    transform: scale(20px);
 }
 
 .cards-total{
     border: none;
     text-align: center;
     height: 29.9rem;
-}
-
-.img-card{
-    transition: 0.5s ease;
-    cursor: pointer;
-}
-
-.img-card:hover{
-    transform: scale(1.1);
-
 }
 
 .btn-add{
