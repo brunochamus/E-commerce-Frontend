@@ -1,0 +1,57 @@
+.count-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.number {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.button-count {
+    font-size: 1.5rem;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    border-radius: 8px;
+    background-color: #e0eb81;
+}
+
+.button-count:hover {
+    background-color: #f3c500;
+}
+
+.push-cart {
+    position: relative;
+    background-color:#e0eb81;
+    border-radius: 5px;
+    box-shadow:#757171;
+    padding: 15px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 15rem;
+    height: 49px;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all .1s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.push-cart::before {
+    content: "";
+    background-color: #f3c500;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 300ms ease-in-out;
+    display: inline-block;
+}
+
+.push-cart:hover::before {
+    width: 100%;
+}
