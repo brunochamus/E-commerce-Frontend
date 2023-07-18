@@ -62,6 +62,7 @@ export const Checkout = () => {
                         <div key={producto.item.id}>
                             <p> {producto.item.nombre} x {producto.cantidad}</p>
                             <p> {producto.item.precio} </p>
+                            <img src={producto.item.img} alt="" />
                             <hr />
                         </div>
                     ))
@@ -102,7 +103,7 @@ export const Checkout = () => {
 
             {
                 ordenId && (
-                    <strong>¡Gracias por tu compra! Este es tu numero de orden: {ordenId} </strong>
+                    <p>¡Gracias por tu compra! Este es tu numero de orden: {ordenId} </p>
                 )
             }
         </>

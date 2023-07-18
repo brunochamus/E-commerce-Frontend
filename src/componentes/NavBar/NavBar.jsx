@@ -18,7 +18,7 @@ const NavBar = () => {
           <Nav className="me-auto">
             <NavLink to="/categoria/1" className='sec'>Procesadores</NavLink>
             <NavLink to="/categoria/2" className='sec'>Mothers</NavLink>
-            <NavLink className='sec'>Contacto</NavLink>
+            <NavLink to="/ContactForm" className='sec'>Contacto</NavLink>
             <CarWidget/>
           </Nav>
           <Nav>
