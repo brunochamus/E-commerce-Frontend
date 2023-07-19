@@ -1,7 +1,8 @@
 import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../service/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 export const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -41,15 +42,34 @@ export const Checkout = () => {
             email
         };
 
-        addDoc(collection(db, "ordenes"), orden)
-            .then(docRef => {
-                setOrdenId(docRef.id);
-                vaciarCarrito();
+        Promise.all(
+            orden.items.map(async (productoOrden) => {
+                const productoRef = doc(db, "productos", productoOrden.id);
+                
+                const productoDoc = await getDoc(productoRef);
+                const stockActual = productoDoc.data().stock;
+
+                await updateDoc (productoRef, {
+                    stock: stockActual - productoOrden.cantidad,
+                })
             })
-            .catch(error => {
-                console.log("Error al crear orden", error)
-                setError("se produjo un error en la creacion de orden")
+        )
+            .then(()=> {
+                addDoc(collection(db, "ordenes"), orden)
+                .then((docRef) => {
+                    setOrdenId(docRef.id);
+                    vaciarCarrito();
+                })
+                .catch((error) =>{
+                    console.log ("Error en creacon de orden", error);
+                    setError("Error en orden")
+                })
             })
+            .catch((error) => {
+                console.log("No se puede actualizar el stock", error);
+                setError("No se actualizo el stock");
+            })
+
 
     }
 

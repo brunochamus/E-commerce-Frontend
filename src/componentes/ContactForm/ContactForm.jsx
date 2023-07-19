@@ -35,14 +35,14 @@ const ContactForm = () => {
     }
 
   return (
-    <form>
+    <form onSubmit={enviarMensaje}>
         <label>Nombre</label>
         <input type="text" value={nombre} onChange={(e)=> setNombre(e.target.value)} />
 
         <label>Email</label>
         <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} />
 
-        <label>Nombre</label>
+        <label>Mensaje</label>
         <textarea value={mensaje} onChange={(e)=> setMensaje(e.target.value)}></textarea>
 
         <button type="submit">Contactanos!</button>
