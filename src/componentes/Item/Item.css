@@ -1,12 +1,14 @@
 .cards-prod{
     display: inline-block;
-    margin: 2.6rem;
+    margin: 2.3rem;
+    align-items: center;
 }
 
 .cards-total{
     border: none;
     text-align: center;
     height: 29.9rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .btn-add{
@@ -15,7 +17,6 @@
     border: none;
     width: 100%;
     text-transform: uppercase;
-    font-weight: 700;
     border-radius: 0%;
     text-decoration: none;
 }
@@ -33,5 +34,4 @@
 .prod{
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-weight: 500;
 }

@@ -11,7 +11,7 @@ const CarWidget = () => {
         <Link to="/cart" >
         <img className='imgCarro' src="https://www.sportopticas.com/img/iconos/icono-carrito.png" alt="carrito"/>
         {
-          cantidadTotal > 0 && <strong> {cantidadTotal} </strong>
+          cantidadTotal > 0 && <strong  className='num-car' > {cantidadTotal} </strong>
         }
         </Link>
     </div>

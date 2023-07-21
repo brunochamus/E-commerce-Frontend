@@ -1,0 +1,95 @@
+
+.info{
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #FEBF00;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.item-check{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.lab-check {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: black;
+
+}
+
+.input-check {
+    border-radius: 10px;
+    outline: 3px solid #FEBF00;
+    border: 0;
+    background-color: #e2e2e2;
+    outline-offset: 3px;
+    padding: 10px 1rem;
+    transition: 0.25s;
+}
+
+.input-check:focus {
+    outline-offset: 5px;
+    background-color: #fff
+}
+
+.checking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.check-bt {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    margin-top: 0.2rem;
+}
+
+.check-bt:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.check-bt:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+.error-campos{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: red;
+    font-weight: 800;
+}
+
+.orden{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+    font-weight: 800;
+}

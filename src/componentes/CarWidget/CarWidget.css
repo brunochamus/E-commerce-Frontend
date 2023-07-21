@@ -2,16 +2,9 @@
     width: 2.1rem;
     margin-left: 2rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
-strong{
-    font-size: 1.3rem;
-    color: #fff;
-    margin-right: 2rem;
-    padding: 1rem;
-}
-
-
-.imgCarro:hover{
-    border-bottom: solid 1px #f3c500;
+.num-car{
+    color: aliceblue;
 }

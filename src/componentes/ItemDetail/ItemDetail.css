@@ -6,6 +6,7 @@
     margin-right: auto;
     text-align: center;
     padding: 1rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .nombre-detalle{
@@ -33,6 +34,22 @@ h4{
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
+}
+
+.alcarro{
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.alcarro:hover{
+    border-bottom: #f3c500 solid 3px;
+}
+
+.item-finali{
+    text-decoration: none;
+    color: black;
 }
 
 @media screen and (max-width: 771px){

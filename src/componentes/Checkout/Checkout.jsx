@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../service/config";
-import { collection, addDoc, updateDoc } from "firebase/firestore";
-import { doc, getDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import './Checkout.css'
 
 export const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -45,25 +45,25 @@ export const Checkout = () => {
         Promise.all(
             orden.items.map(async (productoOrden) => {
                 const productoRef = doc(db, "productos", productoOrden.id);
-                
+
                 const productoDoc = await getDoc(productoRef);
                 const stockActual = productoDoc.data().stock;
 
-                await updateDoc (productoRef, {
+                await updateDoc(productoRef, {
                     stock: stockActual - productoOrden.cantidad,
                 })
             })
         )
-            .then(()=> {
+            .then(() => {
                 addDoc(collection(db, "ordenes"), orden)
-                .then((docRef) => {
-                    setOrdenId(docRef.id);
-                    vaciarCarrito();
-                })
-                .catch((error) =>{
-                    console.log ("Error en creacon de orden", error);
-                    setError("Error en orden")
-                })
+                    .then((docRef) => {
+                        setOrdenId(docRef.id);
+                        vaciarCarrito();
+                    })
+                    .catch((error) => {
+                        console.log("Error en creacon de orden", error);
+                        setError("Error en orden")
+                    })
             })
             .catch((error) => {
                 console.log("No se puede actualizar el stock", error);
@@ -75,57 +75,59 @@ export const Checkout = () => {
 
     return (
         <>
-            <h2>Checkout</h2>
+            <h2 className="info" >Rellena el formulario y nos contactaremos para enviar sus productos</h2>
+
             <form onSubmit={manejadorFormulario}>
                 {
                     carrito.map(producto => (
-                        <div key={producto.item.id}>
+                        <div className="item-check" key={producto.item.id}>
                             <p> {producto.item.nombre} x {producto.cantidad}</p>
-                            <p> {producto.item.precio} </p>
-                            <img src={producto.item.img} alt="" />
+                            <p> $ {producto.item.precio} </p>
                             <hr />
                         </div>
                     ))
                 }
-                <hr />
 
                 <div className="form-group">
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    <label className="lab-check">Nombre</label>
+                    <input className="input-check" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="">Apellido</label>
-                    <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                    <label className="lab-check">Apellido</label>
+                    <input className="input-check" type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="">Telefono</label>
-                    <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                    <label className="lab-check">Telefono</label>
+                    <input className="input-check" type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="">Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <label className="lab-check">Email</label>
+                    <input className="input-check" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="">Email Confirmacion</label>
-                    <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                    <label className="lab-check">Email Confirmacion</label>
+                    <input className="input-check" type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
 
                 {
-                    error && <p style={{ color: "red" }}>{error}</p>
+                    error && <p className="error-campos" >{error}</p>
                 }
 
-                <button type="submit">Finalizar Compra</button>
-            </form>
-
-            {
+{
                 ordenId && (
-                    <p>¡Gracias por tu compra! Este es tu numero de orden: {ordenId} </p>
+                    <p className="orden" >¡Gracias por tu compra! <br /> Este es tu numero de orden: <br /> {ordenId} </p>
                 )
             }
+
+                <div className="checking">
+                    <button className="check-bt" type="submit">Finalizar Compra</button>
+                </div>
+            </form>
+
         </>
     )
 }

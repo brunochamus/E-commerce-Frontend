@@ -18,12 +18,14 @@ const NavBar = () => {
           <Nav className="me-auto">
             <NavLink to="/categoria/1" className='sec'>Procesadores</NavLink>
             <NavLink to="/categoria/2" className='sec'>Mothers</NavLink>
+            <NavLink to="/categoria/3" className='sec'>Memorias</NavLink>
+            <NavLink to="/categoria/4" className='sec'>Gabinetes</NavLink>
+            <NavLink to="/categoria/5" className='sec'>Placas de Video</NavLink>
             <NavLink to="/ContactForm" className='sec'>Contacto</NavLink>
             <CarWidget/>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2} href="#memes">
-            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

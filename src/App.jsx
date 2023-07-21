@@ -14,7 +14,7 @@ const App = () => {
         <CarritoProvider>
           <NavBar />
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting={"Bienvenido! Arma aqui la pc de tus sueños!"} />} />
+            <Route path="/" element={<ItemListContainer greeting={"¿Quieres armar una compu personalizada?"} />} />
             <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
             <Route path="/Item/:idItem" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart/>}></Route>
