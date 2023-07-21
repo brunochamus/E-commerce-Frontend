@@ -1,5 +1,6 @@
 import { useState } from "react"
 import emailjs from "emailjs-com"
+import swal from 'sweetalert';
 import "./ContactForm.css"
 
 const ContactForm = () => {
@@ -13,20 +14,21 @@ const ContactForm = () => {
         const templateParams = {
             from_name: nombre,
             from_email: email,
+            email_id: email,
             message: mensaje
         };
 
         emailjs.send(
             "service_9cu5r4d",
-            "template_ig7eg5b",
+            "template_8y6b8qp",
             templateParams,
             "y_d88HKFieGP8Jcdr"
         )
             .then(() => {
-                alert("Mensaje enviado correctamente")
+                swal("¡Muchas Gracias!", "A la brevedar nos contactaremos con usted", "success");
             })
             .catch(() => {
-                alert("Error al enviar mensaje")
+                swal("¡ERROR!", "El mensaje no se envio, revise el formulario y vuelva a intentar", "warning");
             })
 
         setNombre("");

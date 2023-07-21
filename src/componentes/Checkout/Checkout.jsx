@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../service/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import emailjs from "emailjs-com"
+import swal from 'sweetalert';
 import './Checkout.css'
 
 export const Checkout = () => {
@@ -12,6 +14,7 @@ export const Checkout = () => {
     const [emailConfirmacion, setEmailConfirmacion] = useState("");
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContext);
 
@@ -70,8 +73,37 @@ export const Checkout = () => {
                 setError("No se actualizo el stock");
             })
 
+            const templateParams = {
+                from_name: nombre,
+                from_email: email,
+                email_id: email,
+                message: mensaje
+            };
+    
+            emailjs.send(
+                "service_9cu5r4d",
+                "template_n5onf2b",
+                templateParams,
+                "y_d88HKFieGP8Jcdr"
+            )
+                .then(() => {
+                    swal("¡Muchas Gracias!", "A continuacion su numero de orden", "success");
+                })
+                .catch(() => {
+                    swal("¡ERROR!", "La compra no se pudo realizar, contactate con nosotros", "warning");
+                })
+    
+                setNombre("");
+                setApellido("");
+                setTelefono("");
+                setEmail("");
+                setEmailConfirmacion("");
+                setMensaje("");
+    
 
     }
+
+    
 
     return (
         <>
