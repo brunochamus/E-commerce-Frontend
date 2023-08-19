@@ -1,5 +1,5 @@
 # Tienda PC COMPONENTS
-Proyecto creado para final de React para CoderHouse. Se basa en un e-commerce de componentes de pc que permite ver una lista de productos, ver sus detalles, agregar al carrito variedad de productos asi como tambien la cantidad deseada por el usuario, luego de esto se confirma la venta y deben llenar un forumalario el cual al confirmarlo lanza un numero de orden.
+Proyecto creado para final de React para CoderHouse, este mismo recibio una calificacion de 10. Se basa en un e-commerce de componentes de pc que permite ver una lista de productos, ver sus detalles, agregar al carrito variedad de productos asi como tambien la cantidad deseada por el usuario, luego de esto se confirma la compra y deben llenar un forumalario el cual al confirmarlo lanza un numero de orden.
 
 ## Tecnologías utilizadas
 - Vite
